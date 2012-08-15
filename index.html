@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title></title>
+  <style type="text/css">
+  @font-face {
+    font-family: "aldo";
+    src: url(fonts/AldotheApache.ttf) format("truetype");
+  }
+
+  body {
+    margin: 0;
+    padding: 4px;
+    font-family: "aldo";
+    color: #fff;
+    text-shadow: #000 0px 5px 5px;
+    text-align: left;
+    font-size: 28pt;
+    line-height: 36px;
+
+    overflow: hidden;
+
+    cursor: default;
+    // background: #666;
+  }
+
+
+
+  </style>
+  <script type="text/javascript">
+  function $(el) { return document.getElementById(el); }
+
+  function trackUpdate(track)
+  {
+    var name = track.title;
+    var artist = track.artist;
+    var album = track.album;
+
+    /*TODO: trim overly long strings */
+    $('title').innerHTML = (typeof(name) != 'undefined') ? artist + " :: " + name : "";
+    $('album').innerHTML = (typeof(album) != 'undefined') ? album : "";
+  }
+
+  </script>
+</head>
+<body id="simpleBar">
+  <div id="container">
+    <div id="title"></div>
+    <div id="album"></div>
+  </div>
+</body>
+</html>
